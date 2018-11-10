@@ -1,0 +1,25 @@
+---
+server:
+  port: 8888
+
+spring:
+  security:
+    user:
+      name: pluralsight
+      password: pluralsight
+  cloud:
+    config:
+      server:
+          git:
+           uri: https://github.com/assaduzzaman-dsi/pluralsight-spring-cloudconfig-wa-tolls
+          #username: uname
+          #password: pass
+           search-paths:
+           - 'station*'
+           repos:
+            perf:
+              pattern:
+                - "*/perf"
+              uri: https://github.com/assaduzzaman-dsi/micro-spring-cloudconfig-perf
+              search-paths:
+                - 'station*'             
